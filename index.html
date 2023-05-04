@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test VK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page__body">
+    <main>
+        <div class="container">
+            <h1 class="main-title">Бронирование переговорной</h1>
+            <form class="form" enctype="multipart/form-data" autocomplete="off">
+                <select class="form__select" name="tower" id="tower">
+                    <option value="A">Башня А</option>
+                    <option value="B">Башня Б</option>
+                </select>
+                <select class="form__select" name="floor" id="floor">
+                    <option value="3">3 этаж</option>
+                </select>
+                <select class="form__select" name="room" id="room">
+                    <option value="1">Переговорная 1</option>
+                </select>
+                <div class="form__select-wrapper">
+                    <p class="form__select-label"> Дата и время</p>
+                    <input class="form__select-date" name="date" type="date" id="date">
+                    <p class="form__select-label form__select-label--time">Выберите интервал</p>
+                    <div class="form__select-wrapper form__select-wrapper--row">
+                        <label>С <input class="form__select-date" name="time-from" type="time" id="time-from"></label>
+                        <label>По <input class="form__select-date" name="time-to" type="time" id="time-to"></label>
+                    </div>
+                </div>
+                <textarea class="form__comment-area" name="comment" id="comment" placeholder="Комментарий"></textarea>
+                <button class="button" type="submit" id="submit">Забронировать</button>
+                <button class="button" type="reset" id="reset">Очистить</button>
+            </form>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

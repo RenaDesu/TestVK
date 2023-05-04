@@ -1,0 +1,97 @@
+.page {
+    height: 100%;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.page__body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #e7e8ec;
+}
+
+.container {
+    max-width: 360px;
+    padding: 0 20px;
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    margin: 50px 0 30px 0;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.form {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffff;
+    border-radius: 8px;
+}
+
+.form__select,
+.form__select-date {
+    min-height: 40px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    background-color: #f0f2f5;
+    cursor: pointer;
+}
+
+.form__select-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__select-wrapper--row {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form__select-label {
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.form__select-label--time {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.form__comment-area {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    min-height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    background-color: #f0f2f5;
+    resize: none;
+    cursor: pointer;
+}
+
+.button {
+    margin: 0 0 20px 0;
+    padding: 10px;
+    background-color: #0077ff;
+    color: #ffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+    background-color: #00a2ff;
+}

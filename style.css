@@ -91,7 +91,7 @@
 
 .form__select-date--time {
     margin: 0;
-    width: 34%;
+    min-width: 34%;
 }
 
 .form__comment-area {

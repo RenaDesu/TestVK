@@ -1,7 +1,24 @@
-// Вывод данных формы в консоль в JSON формате
+const form = document.querySelector('.form');
+const popUp = document.querySelector('.modal-container');
+const closeButton = document.querySelector('.modal-container-success__close-button');
+const floorSelect = document.querySelector('#floor');
+const roomSelect = document.querySelector('#room');
 
-const form = document.querySelector('form');
 
+// Pop-up с сообщением о бронировании
+
+const showSuccessPopUp = () => {
+    popUp.classList.remove('modal-container--closed');
+};
+
+const closeSuccessPopUp = () => {
+    form.reset();
+    popUp.classList.add('modal-container--closed');
+}
+
+closeButton.addEventListener('click', closeSuccessPopUp);
+
+// Вывод данных формы в консоль в JSON формате + Pop-up с сообщением о бронировании
 
 const showFormData = (event) => {
     event.preventDefault();
@@ -10,28 +27,23 @@ const showFormData = (event) => {
     const formDataObj = {};
     formData.forEach((value, key) => (formDataObj[key] = value))
     console.log(JSON.stringify(formDataObj));
+    showSuccessPopUp();
 }
 
 form.addEventListener('submit', showFormData);
 
-
-
 // Заполнение селектов этажей и переговорок
-
-const floorSelect = document.querySelector('#floor');
 
 const addFloor = () => {
     for (let i = 4; i <= 27; i++) {
         let option = document.createElement("option");
-        option.setAttribute("value", i.toString());
-        option.innerHTML = i.toString();
+        option.setAttribute("value", `${i.toString()} этаж`);
+        option.innerHTML = `${i.toString()} этаж`;
         floorSelect.appendChild(option);
     }
 }
 
 addFloor();
-
-const roomSelect = document.querySelector('#room');
 
 const addRoom = () => {
     for (let i = 2; i <= 10; i++) {
@@ -43,3 +55,4 @@ const addRoom = () => {
 }
 
 addRoom();
+

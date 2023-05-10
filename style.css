@@ -14,7 +14,7 @@
     border: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
 
 .page__body {
     display: flex;
@@ -87,6 +87,18 @@
 .form__select-date--time {
     margin: 0;
     width: 34%;
+}
+
+input[type="date"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em;
+}
+
+input[type="time"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em;
 }
 
 .form__comment-area {

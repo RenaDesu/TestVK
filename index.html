@@ -11,8 +11,16 @@
 <body class="page__body">
     <main>
         <div class="container">
-            <h1 class="main-title">Бронирование переговорной</h1>
+            <h1 class="visually-hidden">Бронирование переговорных VK</h1>
             <form class="form" enctype="multipart/form-data" autocomplete="off">
+                <div class="form__logo">
+                    <svg fill="none" height="48" viewBox="0 0 49 48" width="49" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M3.87 3.37C.5 6.75.5 12.17.5 23.04v1.92c0 10.86 0 16.3 3.37 19.67C7.25 48 12.67 48 23.54 48h1.92c10.86 0 16.3 0 19.67-3.37 3.37-3.38 3.37-8.8 3.37-19.67v-1.92c0-10.86 0-16.3-3.37-19.67C41.75 0 36.33 0 25.46 0h-1.92C12.68 0 7.24 0 3.87 3.37zm4.74 11.3c.25 12.48 6.82 20 17.65 20h.63v-7.15c3.95.4 6.89 3.35 8.09 7.15h5.69a15.8 15.8 0 0 0-8.03-10.03c2.48-1.49 6-5.09 6.83-9.97h-5.18c-1.08 3.97-4.31 7.57-7.4 7.91v-7.91h-5.26v13.85c-3.2-.8-7.37-4.68-7.54-13.85z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <h2 class="form__title">Бронирование переговорной</h2>
                 <select class="form__select" name="tower" id="tower">
                     <option value="A">Башня А</option>
                     <option value="B">Башня Б</option>
@@ -24,12 +32,16 @@
                     <option value="1">Переговорная 1</option>
                 </select>
                 <div class="form__select-wrapper">
-                    <p class="form__select-label"> Дата и время</p>
+                    <p class="form__select-title">Дата</p>
                     <input class="form__select-date" name="date" type="date" id="date">
-                    <p class="form__select-label form__select-label--time">Выберите интервал</p>
+                    <p class="form__select-title">Время</p>
                     <div class="form__select-wrapper form__select-wrapper--row">
-                        <label>С <input class="form__select-date" name="time-from" type="time" id="time-from"></label>
-                        <label>По <input class="form__select-date" name="time-to" type="time" id="time-to"></label>
+                        <label for="time-from">с</label>
+                        <input class="form__select-date form__select-date--time" name="time-from" type="time"
+                            id="time-from">
+                        <label for="time-to">по</label>
+                        <input class="form__select-date form__select-date--time" name="time-to" type="time"
+                            id="time-to">
                     </div>
                 </div>
                 <textarea class="form__comment-area" name="comment" id="comment" placeholder="Комментарий"></textarea>

@@ -5,6 +5,17 @@
     line-height: 18px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 .page__body {
     display: flex;
     flex-direction: column;
@@ -21,19 +32,24 @@
     flex-direction: column;
 }
 
-.main-title {
-    margin: 50px 0 30px 0;
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-}
-
 .form {
-    padding: 15px;
+    padding: 32px 15px 15px 15px;
     display: flex;
     flex-direction: column;
     background-color: #ffff;
     border-radius: 8px;
+}
+
+.form__logo {
+    align-self: center;
+    color: #0077ff
+}
+
+.form__title {
+    margin: 20px 0 30px 0;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
 }
 
 .form__select,
@@ -50,23 +66,27 @@
 .form__select-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
 }
 
 .form__select-wrapper--row {
+    margin: 0 0 20px 0;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.form__select-label {
+.form__select-title {
+    margin: 0 0 20px 0;
     text-align: center;
     font-size: 18px;
     line-height: 20px;
     font-weight: 500;
 }
 
-.form__select-label--time {
-    font-size: 14px;
-    line-height: 18px;
+.form__select-date--time {
+    margin: 0;
+    width: 34%;
 }
 
 .form__comment-area {

@@ -20,22 +20,26 @@ form.addEventListener('submit', showFormData);
 
 const floorSelect = document.querySelector('#floor');
 
-floorSelect.addEventListener('click', () => {
+const addFloor = () => {
     for (let i = 4; i <= 27; i++) {
         let option = document.createElement("option");
         option.setAttribute("value", i.toString());
         option.innerHTML = i.toString();
         floorSelect.appendChild(option);
     }
-});
+}
+
+addFloor();
 
 const roomSelect = document.querySelector('#room');
 
-roomSelect.addEventListener('click', () => {
+const addRoom = () => {
     for (let i = 2; i <= 10; i++) {
         let option = document.createElement("option");
         option.setAttribute("value", `Переговорная ${i.toString()}`);
         option.innerHTML = `Переговорная ${i.toString()}`;
         roomSelect.appendChild(option);
     }
-});
+}
+
+addRoom();
